@@ -4,8 +4,6 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Home } from '../View/Home';
 import { Usuario } from '../View/Usuario' ;
-import { ThemeProvider } from "styled-components/native";
-import Theme from "../Theme";
 
 export type RootTabParamList ={
     Home:undefined;
@@ -25,7 +23,6 @@ const Mytheme = {
 
 export const Routes = () => {
   return (
-    <ThemeProvider theme={Theme} >
         <NavigationContainer theme={Mytheme}>
         <Tab.Navigator>
             <Tab.Screen
@@ -35,7 +32,7 @@ export const Routes = () => {
                 tabBarIcon: ({ color }) => (
                     <MaterialCommunityIcons name='home' color={color} size={26} />
                     ),
-                title: 'Lista de Candidatos',
+                title: 'Home',headerTitleAlign: 'center',
             }}
             />
 
@@ -55,7 +52,7 @@ export const Routes = () => {
                         color={color}
                         size={26}
                     />
-                    ),
+                    ), title:'Área do Cliente',headerTitleAlign: 'center',
                 }}
                 />
 
@@ -64,7 +61,6 @@ export const Routes = () => {
 
 
     </NavigationContainer>
-    </ThemeProvider>
     
   );
 }

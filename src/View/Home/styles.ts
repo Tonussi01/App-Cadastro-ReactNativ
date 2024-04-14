@@ -1,27 +1,30 @@
 import styled from "styled-components/native";
 import { StyleSheet } from 'react-native';
 
-export const Container = styled.View`
+export const Body = styled.View`
   flex: 1;
   width: 100%;
+  height: auto;
 `;
 
-export const Title = styled.Text`
-  color: #fff;
-`;
-
-export const Header = styled.ImageBackground`
+export const Header = styled.View`
   width: 100%;
-  height:200;
-  justify-content: flex-end;
+  height: 30%;
+`;
+
+export const ImgBG = styled.ImageBackground`
+  flex: 1;
+  width: 100%;
+  height:100%;
   align-items: center;
 `;
 
-export const Content = styled.View`
-flex: 1;
-justify-content: center;
-align-items: center;
+export const ViewHome = styled.View`
+  flex: 1;
+  width: 100%;
+  height:100%;
 `;
+
 
 export const styles = StyleSheet.create({
 list: {
@@ -29,8 +32,9 @@ list: {
   width: '100%',
 },
 listContent: {
-  padding: 24,
+  padding: 21,
   paddingBottom: 150
-}
+},
 });
+
 
